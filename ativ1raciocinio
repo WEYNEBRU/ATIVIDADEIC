@@ -38,6 +38,15 @@ rna_sequence = ''.join([transcricao[base] for base in stringdna])
 Após inserir o comando print, o resultado obtido está contido no arquivo RNA.txt                                                 
 
 Em seguida, o ideal seria em seguida fazer o mesmo processo de contagem que foi feito na primeira parte da tarefa, para conferir se os números estão compatíveis. 
+
+contagem_rna = {'A': 0, 'U': 0, 'C': 0, 'G': 0}
+
+for base in rna_sequence:
+    if base in contagem_rna:
+        contagem_rna[base] += 1
+
+Depois, inserir o comando print.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Na terceira tarefa, é pedido para fazer a tradução do mRNA em seus aminoácidos correspondentes. Para isso, primeiramente 
 Primeiramente, busquei a informação de uma tabela que indicasse o aminoácido traduzido por cada códon. Ela consta no arquivo codigogenetico.txt
