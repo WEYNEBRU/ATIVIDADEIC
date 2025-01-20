@@ -41,7 +41,7 @@ Em seguida, o ideal seria em seguida fazer o mesmo processo de contagem que foi 
 
 contagem_rna = {'A': 0, 'U': 0, 'C': 0, 'G': 0}
 
-for base in rna_sequence:
+for base in RNA_txt:
     if base in contagem_rna:
         contagem_rna[base] += 1
 
