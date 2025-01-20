@@ -54,28 +54,26 @@ print(contagem_rna)
 Na terceira tarefa, é pedido para fazer a tradução do mRNA em seus aminoácidos correspondentes. Para isso, primeiramente 
 Primeiramente, busquei a informação de uma tabela que indicasse o aminoácido traduzido por cada códon. Ela consta no arquivo codigogenetico.txt, e a sequência transformada em formato de dicionário consta aqui: 
 tabela_codons = {
-    'UUU': 'Phe', 'UUC': 'Phe', 
-    'UUA': 'Leu', 'UUG': 'Leu', 
-    'CUU': 'Leu', 'CUC': 'Leu', 
-    'CUA': 'Leu', 'CUG': 'Leu', 
-    'AUU': 'Ile', 'AUC': 'Ile', 
-    'AUA': 'Ile', 
-    'AUG': 'Met',  # obs: códon de inicio
-    'GUU': 'Val', 'GUC': 'Val', 'GUA': 'Val', 'GUG': 'Val', 
-    'UCU': 'Ser', 'UCC': 'Ser', 'UCA': 'Ser', 'UCG': 'Ser', 
-    'CCU': 'Pro', 'CCC': 'Pro', 'CCA': 'Pro', 'CCG': 'Pro', 
-    'ACU': 'Thr', 'ACC': 'Thr', 'ACA': 'Thr', 'ACG': 'Thr', 
-    'GCU': 'Ala', 'GCC': 'Ala', 'GCA': 'Ala', 'GCG': 'Ala', 
-    'UAU': 'Tyr', 'UAC': 'Tyr', 
-    'UAA': 'Stop','UAG': 'Stop', 'UGA': 'Stop',  
-    'CAU': 'His', 'CAC': 'His', 
-    'CAA': 'Gln', 'CAG': 'Gln', 
-    'AAU': 'Asn', 'AAC': 'Asn', 
-    'AAA': 'Lys', 'AAG': 'Lys', 
-    'GAU': 'Asp', 'GAC': 'Asp', 
-    'GAA': 'Glu', 'GAG': 'Glu', 
-    'GGU': 'Gly', 'GGC': 'Gly', 
-    'GGA': 'Gly', 'GGG': 'Gly'}
+    'UUU': 'Fenilalanina (F)', 'UUC': 'Fenilalanina (F)', 
+    'UUA': 'Leucina (L)', 'UUG': 'Leucina (L)', 
+    'CUU': 'Leucina (L)', 'CUC': 'Leucina (L)', 'CUA': 'Leucina (L)', 'CUG': 'Leucina (L)', 
+    'AUU': 'Isoleucina (I)', 'AUC': 'Isoleucina (I)', 'AUA': 'Isoleucina (I)', 
+    'AUG': 'Metionina (M) – Códon de início', 
+    'GUU': 'Valina (V)', 'GUC': 'Valina (V)', 'GUA': 'Valina (V)', 'GUG': 'Valina (V)', 
+    'UCU': 'Serina (S)', 'UCC': 'Serina (S)', 'UCA': 'Serina (S)', 'UCG': 'Serina (S)', 
+    'CCU': 'Prolina (P)', 'CCC': 'Prolina (P)', 'CCA': 'Prolina (P)', 'CCG': 'Prolina (P)', 
+    'ACU': 'Treonina (T)', 'ACC': 'Treonina (T)', 'ACA': 'Treonina (T)', 'ACG': 'Treonina (T)', 
+    'GCU': 'Alanina (A)', 'GCC': 'Alanina (A)', 'GCA': 'Alanina (A)', 'GCG': 'Alanina (A)', 
+    'UAU': 'Tirosina (Y)', 'UAC': 'Tirosina (Y)', 
+    'UAA': 'Códon de parada', 'UAG': 'Códon de parada', 'UGA': 'Códon de parada', 
+    'CAU': 'Histidina (H)', 'CAC': 'Histidina (H)', 
+    'CAA': 'Glutamina (Q)', 'CAG': 'Glutamina (Q)', 
+    'AAU': 'Asparagina (N)', 'AAC': 'Asparagina (N)', 
+    'AAA': 'Lisina (K)', 'AAG': 'Lisina (K)', 
+    'GAU': 'Ácido aspártico (D)', 'GAC': 'Ácido aspártico (D)', 
+    'GAA': 'Ácido glutâmico (E)', 'GAG': 'Ácido glutâmico (E)', 
+    'UGU': 'Cisteína (C)', 'UGC': 'Cisteína (C)', 
+    'GGU': 'Glicina (G)', 'GGC': 'Glicina (G)', 'GGA': 'Glicina (G)', 'GGG': 'Glicina (G)'}
 
 Para fazer a tradução, minha ideia inicial foi realizar uma análise de uma sequência de RNA, identificando trigramas específicos e comparando-os com os códons de RNA que codificam aminoácidos. Durante a análise, é necessário identificar e tratar adequadamente os códons de início (geralmente AUG - metionina) e os códons de parada (UAA, UAG e UGA), que sinalizam o início e o fim da tradução de uma proteína. Além disso, eu precisava de uma maneira de não só identificar os triagramas mas mantê-los organizados na sequência original para que não houvesse um erro na sequência de aminoácidos resultante. 
 Para resolver isso, decidi extrair os trigramas de três nucleotídeos consecutivos e os armazenar em uma lista, respeitando a ordem original. 
