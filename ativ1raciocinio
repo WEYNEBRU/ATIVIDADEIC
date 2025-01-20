@@ -99,4 +99,4 @@ GGA	Glicina (G)
 GGG	Glicina (G)
 
 Para fazer a tradução, minha ideia inicial foi realizar uma análise de uma sequência de RNA, identificando trigramas específicos e comparando-os com os códons de RNA que codificam aminoácidos. Durante a análise, é necessário identificar e tratar adequadamente os códons de início (geralmente AUG - metionina) e os códons de parada (UAA, UAG e UGA), que sinalizam o início e o fim da tradução de uma proteína. Além disso, eu precisava de uma maneira de não só identificar os triagramas mas mantê-los organizados na sequência original para que não houvesse um erro na sequência de aminoácidos resultante. 
-
+Para resolver isso, decidi extrair os trigramas de três nucleotídeos consecutivos e os armazenar em uma lista, respeitando a ordem original. 
