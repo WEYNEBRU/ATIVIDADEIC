@@ -47,6 +47,9 @@ for base in RNA_txt:
 
 Depois, inserir o comando print.
 
+print(contagem_rna)
+{'A': 189, 'U': 209, 'C': 200, 'G': 227}                  #resultado compatível
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Na terceira tarefa, é pedido para fazer a tradução do mRNA em seus aminoácidos correspondentes. Para isso, primeiramente 
 Primeiramente, busquei a informação de uma tabela que indicasse o aminoácido traduzido por cada códon. Ela consta no arquivo codigogenetico.txt
