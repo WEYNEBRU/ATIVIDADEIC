@@ -10,7 +10,9 @@ Depois disso, criei um dicionário para armazenar a contagem de cada uma das bas
 
  contagem = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
 
-Finalmente, utilizei um loop que definia que, passando por cada uma das letras, cada vez que uma das letras que designei no dicionário "contagem" seria adicionado o valor um - para que o programa fizesse por mim o trabalho de passar por cada letra e contar cada vez que A, C, G ou T aparecessem. Segue código: 
+Finalmente, utilizei um loop que definia que, passando por cada uma das letras, cada vez que uma das letras que designei no dicionário "contagem" seria adicionado o valor um - para que o programa fizesse por mim o trabalho de passar por cada letra e contar cada vez que A, C, G ou T aparecessem. Ou, em outras palavras, iterar pela sequência.
+Segue código: 
+
 for base in stringdna:
      if base in contagem:
          contagem[base] += 1
