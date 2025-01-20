@@ -1,0 +1,43 @@
+Racíocinio estruturado da solução da atividade 1
+
+Primeiramente, a tarefa pede para detectar a frequência das bases C, A, G, T na sequência de DNA. Fiz isso utilizando um loop de contagem básico.
+Fiz da seguinte forma: estabeleci o conteúdo do documento DNA.txt como valor para a varíavel "stringdna". Segue código: 
+
+ stringdna = 
+"TTTATAGTAGAAGAGGTCCAAGCGGGAACAGAACTGCTAACCCAGCCCCATCCTGTCCTTACACAAAGATGCTGCGGTCTTGATCCACCTCGCTCGGCCACTCGTTCACCCCGTCTAAGTTTGCGCGGAACTAACCAAAAGATGACAACAAGGCGGGACGAACCCTTTACGCTGTCACTCCATAAAACATAGTTTTAATACCGGGTCTCTCAAAAAAGTATGCTGGGTGCATCGTTCCTTGGTTTAGTAGCTCCTCCGTTTCGGGCTCGGATGAGCCTCGGAATCCTAAGGGTAAATGCGAAAGATCCCACGGATAAGGTCACTTTAACCTGTTACCCAACCAAGCCGGGCACGCGCGGTCTCCCGGATGACATCTCGGGAGCCTCACGAATCAAGGCCGCAATGCAAGAGAGGCTTTACGCCACGGTAGAGGTTACACGTTTCCCGGGGCAGGATCCCGTCAGAGGTTTCCTTAACGAACTCACTCCAGGATACAGTTCCATGCACTAGGGGTCTCGGAGTCAGGCGCAACCGGCGCAAAGTAAACGAGTGGTCGAAAGCGGCGATTGTTGTCGATGGAGGGTTCTTTAACATACTTACGGCCTTAGCAGTTCATACACCCTCTACTCAAGAGGTTGCAGCGAACTTAGTTCCCAGTAATGCACACTAGTTGACCTCATCCCTAGAGTGACAACTCACTATAGAAGTCGTCGTTTTGCTAATCGATCCCGTCGATCCGATGCAAACTTACCCATTCACGCTCGCACATCGGTTTCACAACGGATCGTCATACTCCAGTGAGACGCGGATGGGCGTCAAGTGGTT"
+
+Depois disso, criei um dicionário para armazenar a contagem de cada uma das bases. Segue código: 
+
+ contagem = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
+
+Finalmente, utilizei um loop que definia que, passando por cada uma das letras, cada vez que uma das letras que designei no dicionário "contagem" seria adicionado o valor um - para que o programa fizesse por mim o trabalho de passar por cada letra e contar cada vez que A, C, G ou T aparecessem. Segue código: 
+for base in stringdna:
+     if base in contagem:
+         contagem[base] += 1
+
+O resultado, após inserir o comando de print, foi o seguinte: 
+
+ print(contagem)
+{'A': 209, 'C': 227, 'G': 200, 'T': 189}
+                                                              #Eu omiti a descrição da contagem enquanto estava sendo feita pelo programa pois era muito extensa, mas posso enviar. 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+A segunda parte da tarefa pede para que eu transforme o conteúdo do arquivo DNA.txt em uma sequência de RNA. Para resolver essa questão, é necessário realizar a transcrição do DNA para RNA, substituindo cada nucleotídeo pela sua base complementar, conforme as regras de pareamento. A base timina (T) do DNA deve ser substituída pela adenina (A) no RNA, a citosina (C) do DNA por guanina (G) no RNA, a adenina (A) do DNA por uracila (U) no RNA, e a guanina (G) do DNA por citosina (C) no RNA. Esse processo de transcrição resulta na formação de uma sequência de RNA mensageiro (mRNA) que corresponde à informação genética do DNA. Usei os seguintes códigos: 
+
+A principio, usei um código básico de substituição para realizar a transcrição: 
+
+transcricao = {'T': 'A', 'A': 'U', 'C': 'G', 'G': 'C'}
+
+Em seguida inseri: 
+rna_sequence = ''.join([transcricao[base] for base in stringdna])
+ #obs: stringdna já estava com valor (Sequencia de dna.txt) no meu shell.
+
+Após inserir o comando print, esse foi o resultado: 
+print(rna_sequence)
+AAAUAUCAUCUUCUCCAGGUUCGCCCUUGUCUUGACGAUUGGGUCGGGGUAGGACAGGAAUGUGUUUCUACGACGCCAGAACUAGGUGGAGCGAGCCGGUGAGCAAGUGGGGCAGAUUCAAACGCGCCUUGAUUGGUUUUCUACUGUUGUUCCGCCCUGCUUGGGAAAUGCGACAGUGAGGUAUUUUGUAUCAAAAUUAUGGCCCAGAGAGUUUUUUCAUACGACCCACGUAGCAAGGAACCAAAUCAUCGAGGAGGCAAAGCCCGAGCCUACUCGGAGCCUUAGGAUUCCCAUUUACGCUUUCUAGGGUGCCUAUUCCAGUGAAAUUGGACAAUGGGUUGGUUCGGCCCGUGCGCGCCAGAGGGCCUACUGUAGAGCCCUCGGAGUGCUUAGUUCCGGCGUUACGUUCUCUCCGAAAUGCGGUGCCAUCUCCAAUGUGCAAAGGGCCCCGUCCUAGGGCAGUCUCCAAAGGAAUUGCUUGAGUGAGGUCCUAUGUCAAGGUACGUGAUCCCCAGAGCCUCAGUCCGCGUUGGCCGCGUUUCAUUUGCUCACCAGCUUUCGCCGCUAACAACAGCUACCUCCCAAGAAAUUGUAUGAAUGCCGGAAUCGUCAAGUAUGUGGGAGAUGAGUUCUCCAACGUCGCUUGAAUCAAGGGUCAUUACGUGUGAUCAACUGGAGUAGGGAUCUCACUGUUGAGUGAUAUCUUCAGCAGCAAAACGAUUAGCUAGGGCAGCUAGGCUACGUUUGAAUGGGUAAGUGCGAGCGUGUAGCCAAAGUGUUGCCUAGCAGUAUGAGGUCACUCUGCGCCUACCCGCAGUUCACCAA                                                   
+
+Em seguida, o ideal seria em seguida fazer o mesmo processo de contagem que foi feito na primeira parte da tarefa, para conferir se os números estão compatíveis. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Na terceira tarefa, é pedido para fazer a tradução do mRNA em seus aminoácidos correspondentes. Para isso, primeiramente 
+Primeiramente, busquei a informação de uma 
