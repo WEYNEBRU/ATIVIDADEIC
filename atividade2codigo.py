@@ -48,8 +48,7 @@ def comparar_dnas(dna1, dna2):
     # Retorna os resultados como um dicionário
     return {
         "desigualdades": desigualdades,
-        "bases_invalidas": bases_invalidas,
-    }
+        "bases_invalidas": bases_invalidas,}
 
 # Exemplo de uso com genomas fictícios
 dna1 = "TTAACGXBA"
