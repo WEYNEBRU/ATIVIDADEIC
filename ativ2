@@ -2,5 +2,8 @@ Partindo do pressuposto inicial de que a evolução são mutações gênicas, ou
 podemos inferir que quando comparamos uma fita base de DNA que já é conhecida com sua replicação, caso ajam bases que não são correspondentes entre as duas fitas, 
 isso sinaliza uma mutação. Tudo isso é a base do processo de evolução.
 A proposta da atividade 2 solicita que se calcule a distância de Hamming entre duas strings de mesmo tamanho, sendo essa distância o número de bases correspondentes que não são iguais. 
+Primeiramente, calculei de forma simples somente as diferenças entre as duas strings de DNA, como foi pedido. (códigodiferençasimples.py)
 
-1. O que fazer com letras que aparecem e não correspondem a nenhuma base 
+Mais a diante, decidi trabalhar a ideia de que talvez seja precido identificar se a diferença se dá entre bases, ou seja, as bases correspondentes são desiguais, ou se há uma alteração para uma letra ou caractere que não corresponde a uma base válida.
+Talvez isso indique poluição dos dados ou algum tipo específico de mutação.
+
