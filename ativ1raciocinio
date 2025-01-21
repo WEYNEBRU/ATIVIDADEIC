@@ -33,7 +33,7 @@ transcricao = {'T': 'A', 'A': 'U', 'C': 'G', 'G': 'C'}
 
 Em seguida inseri: 
 rna_sequence = ''.join([transcricao[base] for base in stringdna])
- #obs: stringdna já estava com valor (Sequencia de dna.txt) no meu shell.
+ #obs: stringdna já estava com valor (DNA.txt) no meu shell.
 
 Após inserir o comando print, o resultado obtido está contido no arquivo RNA.txt                                                 
 
