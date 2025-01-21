@@ -7,7 +7,7 @@
     :return: Número total de desigualdades (diferenças entre as sequências)
     :raises ValueError: Se as sequências de DNA não tiverem o mesmo comprimento
     """
-    
+    #Atenção com o uso do ":" para as funções funcionarem corretamente
     # Verificar se as sequências têm o mesmo comprimento
     if len(dna1) != len(dna2):  # O ":" é necessário aqui
         raise ValueError("As sequências de DNA devem ter o mesmo comprimento.")
