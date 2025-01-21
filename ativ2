@@ -1,0 +1,6 @@
+Partindo do pressuposto inicial de que a evolução são mutações gênicas, ou seja, alterações nas bases nucleicas do DNA (ou RNA) que codificam proteínas, 
+podemos inferir que quando comparamos uma fita base de DNA que já é conhecida com sua replicação, caso ajam bases que não são correspondentes entre as duas fitas, 
+isso sinaliza uma mutação. Tudo isso é a base do processo de evolução.
+A proposta da atividade 2 solicita que se calcule a distância de Hamming entre duas strings de mesmo tamanho, sendo essa distância o número de bases correspondentes que não são iguais. 
+
+1. O que fazer com letras que aparecem e não correspondem a nenhuma base 
