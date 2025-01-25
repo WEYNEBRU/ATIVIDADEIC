@@ -84,3 +84,5 @@ C	Cys	H	His	N	Asn	T	Thr
 D	Asp	I	Ile	P	Pro	V	Val
 E	Glu	K	Lys	Q	Gln	W	Trp
 F	Phe	L	Leu	R	Arg	Y	Tyr
+
+códon de parada consta como "."
